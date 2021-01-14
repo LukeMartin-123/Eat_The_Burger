@@ -1,24 +1,33 @@
 <h1>Eat The Burger</h1>
 
+<h2>Burgers that Are NOT Devoured!</h2>
 <ul>
+
   {{#each burger}}
     {{#unless devour}}
-      {{> burgers/burgers-block devour=true}}
+      {{> burgers/burgers-block devour=false}}
     {{/unless}}
   {{/each}}
 </ul>
 
 
+<h2>Burgers that Are Devoured!</h2>
+<ul>
+  {{#each burger}}
+    {{#if devour}}
+      {{> burgers/burgers-block devour=true}}
+    {{/if}}
+  {{/each}}
+</ul>
 
-<h2>Burgers</h2>
+
+<h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="bur">Burgers:</label>
-    <input type="text" id="bur" name="name">
+    <label for="bur">Burger Name</label>
+    <input type="input" id="bur" name="burger_name" value="0">
   </div>
 
-
-
-  <button type="submit">Add a Burger</button>
+  <button type="submit">Add Burger</button>
 </form>
