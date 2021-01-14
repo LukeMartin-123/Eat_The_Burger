@@ -17,9 +17,8 @@ router.get("/", function(req, res) {
     burgers.create([
       "burger_name"
     ], [
-      req.body.burger_name
+      req.body.burger_name,
     ], function(result) {
-      // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
   });
