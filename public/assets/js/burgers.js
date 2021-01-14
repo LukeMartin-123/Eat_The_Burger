@@ -2,7 +2,7 @@
 $(function () {
     $(".change-devour").on("click", function (event) {
         var id = $(this).data("id");
-        var devoured = $(this).data("devour");
+        var devoured = $(this).data("devoured");
 
         var newDevouredState = {
             devour: devoured
@@ -14,7 +14,7 @@ $(function () {
             data: newDevouredState
         }).then(
             function () {
-                console.log("changed burger", newDevouredState);
+                console.log("changed burger", devoured);
                 // Reload the page to get the updated list
                 location.reload();
             }
