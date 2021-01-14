@@ -3,9 +3,9 @@
 <h2>Burgers that Are NOT Devoured!</h2>
 <ul>
 
-  {{#each burger}}
+  {{#each burgers}}
     {{#unless devour}}
-      {{> burgers/burgers-block devour=false}}
+      {{> burgers-block devour=false}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,8 +13,8 @@
 
 <h2>Burgers that Are Devoured!</h2>
 <ul>
-  {{#each burger}}
-    {{#if devour}}
+  {{#each burgers}}
+    {{#if Devoured}}
       {{> burgers/burgers-block devour=true}}
     {{/if}}
   {{/each}}
